@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String         @id @default(uuid())
+  fullName  String
+  email     String         @unique
+  password  String
+  phone     String
+  role      String         // 'Admin' or 'User'
+  createdAt DateTime       @default(now())
+
+  posts     Post[]
+  comments  CommentForm[]
+  feedbacks FeedbackForm[]
+}
+
+model Post {
+  id          String         @id @default(uuid())
+  categoryId  String
+  userId      String
+  uploadDate  DateTime       @default(now())
+  price       Int
+  area        Int
+  location    String
+  bedroom     Int
+  content     String
+  isApproved  Boolean         @default(false)
+  isRented    Boolean         @default(false)
+
+  category    Category        @relation(fields: [categoryId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  user        User            @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  images      Image[]
+  comments    CommentForm[]
+
+  @@index([userId])
+  @@index([categoryId])
+}
+
+model Category {
+  id    String   @id @default(uuid())
+  name  String   @unique
+  posts Post[]
+}
+
+model Image {
+  id      String  @id @default(uuid())
+  base    String
+  postId  String
+
+  post    Post    @relation(fields: [postId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model CommentForm {
+  id         String   @id @default(uuid())
+  userId     String
+  postId     String
+  submitDate DateTime @default(now())
+  content    String
+  rating     Int
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  post       Post     @relation(fields: [postId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model FeedbackForm {
+  id         String   @id @default(uuid())
+  userId     String
+  submitDate DateTime @default(now())
+  content    String
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model TotalViews {
+  id        String   @id @default(uuid())
+  trackDate DateTime
+  total     Int
+}
