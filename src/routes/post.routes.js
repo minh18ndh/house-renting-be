@@ -1,7 +1,7 @@
 import express from 'express';
 import * as postController from '../controllers/post.controller.js';
 import { requireAuth } from '../middleware/requireAuth.js';
-import { upload } from '../middleware/upload.js';
+import { upload } from '../utils/upload.js';
 
 const router = express.Router();
 
@@ -138,7 +138,7 @@ router.post(
  *       403:
  *         description: Forbidden
  */
-router.put('/:id', requireAuth, postController.updatePost);
+router.put('/:id', requireAuth, postController.updatePost); // check for admin and owner in service
 
 /**
  * @swagger
@@ -160,6 +160,6 @@ router.put('/:id', requireAuth, postController.updatePost);
  *       403:
  *         description: Forbidden
  */
-router.delete('/:id', requireAuth, postController.deletePost);
+router.delete('/:id', requireAuth, postController.deletePost); // check for admin and owner in service
 
 export default router;

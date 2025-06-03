@@ -16,7 +16,7 @@ export const getAllPosts = async ({ categoryId, location, priceRange, userId }) 
     },
   });
 
-  // Sort by distance if `location` is present
+  // Sort by distance if 'location' is present
   if (location) {
     const [queryLat, queryLng] = location.split(',').map(Number);
 
@@ -77,7 +77,7 @@ export const createPost = async (data, userId, imagePaths) => {
       content,
       isRented: false,
       images: {
-        create: imagePaths.map(path => ({ base: path })),
+        create: imagePaths.map(path => ({ baseUrl: path })),
       },
     },
     include: {
@@ -88,7 +88,7 @@ export const createPost = async (data, userId, imagePaths) => {
   return {
     ...created,
     images: created.images.map(img => ({
-      url: `${process.env.BASE_URL || 'http://localhost:3000'}/${img.base}`,
+      url: `${process.env.BASE_URL || 'http://localhost:3000'}/${img.baseUrl}`,
     })),
   };
 };
