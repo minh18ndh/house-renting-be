@@ -7,7 +7,12 @@ export const getAllApprovedPosts = () => {
       images: {
         take: 1,
       },
-      user: true,
+      user: {
+        select: {
+          id: true,
+          fullName: true,
+        }
+      },
       category: true,
     }
   });
@@ -16,7 +21,17 @@ export const getAllApprovedPosts = () => {
 export const getPostById = async (id) => {
   return prisma.post.findUnique({
     where: { id },
-    include: { user: true, category: true, images: true, comments: true }
+    include: {
+      user: {
+        select: {
+          id: true,
+          fullName: true,
+        }
+      },
+      category: true,
+      images: true,
+      comments: true,
+    }
   });
 };
 
@@ -62,7 +77,26 @@ export const updatePost = async (postId, data, userId, role) => {
 
   return prisma.post.update({
     where: { id: postId },
-    data,
+    data: {
+      price: Number(data.price),
+      area: Number(data.area),
+      location: data.location,
+      bedroom: Number(data.bedroom),
+      content: data.content,
+      isRented: data.isRented,
+    }
+  });
+};
+
+export const approvePost = async (postId) => {
+  const post = await prisma.post.findUnique({ where: { id: postId } });
+  if (!post) throw new Error('Post not found');
+
+  return prisma.post.update({
+    where: { id: postId },
+    data: {
+      isApproved: true,
+    }
   });
 };
 

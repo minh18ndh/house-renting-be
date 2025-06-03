@@ -1,6 +1,7 @@
 import express from 'express';
 import * as postController from '../controllers/post.controller.js';
 import { requireAuth } from '../middleware/requireAuth.js';
+import { requireRole } from '../middleware/requireRole.js';
 import { upload } from '../middleware/upload.js';
 
 const router = express.Router();
@@ -23,6 +24,27 @@ const router = express.Router();
  *         description: List of approved posts
  */
 router.get('/', postController.getAllApprovedPosts);
+
+/**
+ * @swagger
+ * /api/posts/{id}:
+ *   get:
+ *     summary: Get a post by ID
+ *     tags: [Posts]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID of the post to retrieve
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: The requested post
+ *       404:
+ *         description: Post not found
+ */
+router.get('/:id', postController.getPostById);
 
 /**
  * @swagger
@@ -107,6 +129,31 @@ router.post(
  *         description: Forbidden
  */
 router.put('/:id', requireAuth, postController.updatePost);
+
+/**
+ * @swagger
+ * /api/posts/{id}/approve:
+ *   patch:
+ *     summary: Approve a post (admin only)
+ *     tags: [Posts]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID of the post to approve
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Post approved
+ *       403:
+ *         description: Forbidden
+ *       404:
+ *         description: Post not found
+ */
+router.patch('/:id/approve', requireAuth, requireRole('Admin'), postController.approvePost);
 
 /**
  * @swagger

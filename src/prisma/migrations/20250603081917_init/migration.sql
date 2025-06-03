@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[Category] (
 -- CreateTable
 CREATE TABLE [dbo].[Image] (
     [id] NVARCHAR(1000) NOT NULL,
-    [url] NVARCHAR(1000) NOT NULL,
+    [baseUrl] NVARCHAR(1000) NOT NULL,
     [postId] NVARCHAR(1000) NOT NULL,
     CONSTRAINT [Image_pkey] PRIMARY KEY CLUSTERED ([id])
 );

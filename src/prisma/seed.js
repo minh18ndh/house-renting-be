@@ -72,26 +72,50 @@ const seed = async () => {
             });
         }
 
-        const category = await prisma.category.findFirst({
-            where: { name: 'Nhà chung cư' }
+        const category1 = await prisma.category.findFirst({
+            where: { name: 'Shophouse, nhà mặt phố' }
         });
 
         await prisma.post.create({
             data: {
                 userId: user1.id,
-                categoryId: category.id,
-                price: 2000,
+                categoryId: category1.id,
+                price: 3000,
                 area: 60,
                 location: 'New York City',
                 bedroom: 2,
-                content: 'Luxury apartment in the heart of NYC.',
+                content: 'A cozy house right in the heart of NYC.',
                 isApproved: true,
                 isRented: false,
                 images: {
                     create: [
                         {
-                            url: 'uploads/newyork1.jpg'
+                            baseUrl: 'uploads/newyork1.jpg'
                         }
+                    ]
+                }
+            }
+        });
+
+        const category2 = await prisma.category.findFirst({
+            where: { name: 'Nhà chung cư' }
+        });
+
+        await prisma.post.create({
+            data: {
+                userId: user2.id,
+                categoryId: category2.id,
+                price: 4000,
+                area: 500,
+                location: 'Hanoi',
+                bedroom: 4,
+                content: 'Luxury apartment next to the famous West Lake of Hanoi.',
+                isApproved: true,
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/hanoi1.jpg' },
+                        { baseUrl: 'uploads/hanoi2.jpg' }
                     ]
                 }
             }

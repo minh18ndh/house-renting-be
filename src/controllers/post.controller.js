@@ -26,6 +26,15 @@ export const updatePost = async (req, res) => {
   }
 };
 
+export const approvePost = async (req, res) => {
+  try {
+    const post = await postService.approvePost(req.params.id);
+    res.json(post);
+  } catch (err) {
+    res.status(404).json({ error: err.message });
+  }
+};
+
 export const deletePost = async (req, res) => {
   try {
     await postService.deletePost(req.params.id, req.userId, req.role);
