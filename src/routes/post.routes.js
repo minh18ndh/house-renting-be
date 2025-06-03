@@ -27,6 +27,10 @@ const router = express.Router();
  *           type: string
  *           enum: [0-200, 200-500, 500-1000, 1000-2000, 2000+]
  *       - in: query
+ *         name: bedroom
+ *         schema:
+ *           type: number
+ *       - in: query
  *         name: userId
  *         schema:
  *           type: string

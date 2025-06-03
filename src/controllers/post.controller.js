@@ -1,8 +1,8 @@
 import * as postService from '../services/post.service.js';
 
 export const getAllPosts = async (req, res) => {
-  const { categoryId, location, priceRange, userId } = req.query;
-  const posts = await postService.getAllPosts({ categoryId, location, priceRange, userId });
+  const { categoryId, location, priceRange, bedroom, userId } = req.query;
+  const posts = await postService.getAllPosts({ categoryId, location, priceRange, bedroom, userId });
   res.json(posts);
 };
 

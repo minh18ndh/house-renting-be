@@ -1,9 +1,10 @@
 import { prisma } from '../prisma/client.js';
 
-export const getAllPosts = async ({ categoryId, location, priceRange, userId }) => {
+export const getAllPosts = async ({ categoryId, location, priceRange, bedroom, userId }) => {
   const where = {
     ...(categoryId && { categoryId }),
     ...(getPriceFilter(priceRange)),
+    ...(bedroom && { bedroom: Number(bedroom) }),
     ...(userId && { userId }),
   };
 
