@@ -1,10 +1,10 @@
 import { prisma } from '../prisma/client.js';
 
-export const getAllApprovedPosts = async ({ categoryId, location, priceRange }) => {
+export const getAllPosts = async ({ categoryId, location, priceRange, userId }) => {
   const where = {
-    isApproved: true,
     ...(categoryId && { categoryId }),
     ...(getPriceFilter(priceRange)),
+    ...(userId && { userId }),
   };
 
   let posts = await prisma.post.findMany({
@@ -75,7 +75,6 @@ export const createPost = async (data, userId, imagePaths) => {
       location,
       bedroom: Number(bedroom),
       content,
-      isApproved: false,
       isRented: false,
       images: {
         create: imagePaths.map(path => ({ base: path })),
@@ -110,18 +109,6 @@ export const updatePost = async (postId, data, userId, role) => {
       bedroom: Number(data.bedroom),
       content: data.content,
       isRented: data.isRented,
-    }
-  });
-};
-
-export const approvePost = async (postId) => {
-  const post = await prisma.post.findUnique({ where: { id: postId } });
-  if (!post) throw new Error('Post not found');
-
-  return prisma.post.update({
-    where: { id: postId },
-    data: {
-      isApproved: true,
     }
   });
 };

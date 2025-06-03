@@ -31,7 +31,6 @@ model Post {
   location    String
   bedroom     Int
   content     String
-  isApproved  Boolean         @default(false)
   isRented    Boolean         @default(false)
 
   category    Category        @relation(fields: [categoryId], references: [id], onDelete: NoAction, onUpdate: NoAction)

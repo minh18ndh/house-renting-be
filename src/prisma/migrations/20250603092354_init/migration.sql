@@ -26,7 +26,6 @@ CREATE TABLE [dbo].[Post] (
     [location] NVARCHAR(1000) NOT NULL,
     [bedroom] INT NOT NULL,
     [content] NVARCHAR(1000) NOT NULL,
-    [isApproved] BIT NOT NULL CONSTRAINT [Post_isApproved_df] DEFAULT 0,
     [isRented] BIT NOT NULL CONSTRAINT [Post_isRented_df] DEFAULT 0,
     CONSTRAINT [Post_pkey] PRIMARY KEY CLUSTERED ([id])
 );

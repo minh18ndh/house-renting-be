@@ -1,8 +1,8 @@
 import * as postService from '../services/post.service.js';
 
-export const getAllApprovedPosts = async (req, res) => {
-  const { categoryId, location, priceRange } = req.query;
-  const posts = await postService.getAllApprovedPosts({ categoryId, location, priceRange });
+export const getAllPosts = async (req, res) => {
+  const { categoryId, location, priceRange, userId } = req.query;
+  const posts = await postService.getAllPosts({ categoryId, location, priceRange, userId });
   res.json(posts);
 };
 
@@ -24,15 +24,6 @@ export const updatePost = async (req, res) => {
     res.json(post);
   } catch (err) {
     res.status(403).json({ error: err.message });
-  }
-};
-
-export const approvePost = async (req, res) => {
-  try {
-    const post = await postService.approvePost(req.params.id);
-    res.json(post);
-  } catch (err) {
-    res.status(404).json({ error: err.message });
   }
 };
 

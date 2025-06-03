@@ -85,7 +85,6 @@ const seed = async () => {
                 location: '40.83390793277206,-73.92704004289733',
                 bedroom: 2,
                 content: 'A cozy house right in the heart of NYC.',
-                isApproved: true,
                 isRented: false,
                 images: {
                     create: [
@@ -110,7 +109,6 @@ const seed = async () => {
                 location: '21.0669199595017,105.81994743611324',
                 bedroom: 4,
                 content: 'Luxury apartment next to the famous West Lake of Hanoi.',
-                isApproved: true,
                 isRented: false,
                 images: {
                     create: [

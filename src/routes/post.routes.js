@@ -12,14 +12,13 @@ const router = express.Router();
  *   name: Posts
  *   description: Rental posts API
  */
-
 /**
 
 /**
  * @swagger
  * /api/posts:
  *   get:
- *     summary: Get all approved rental posts
+ *     summary: Get all rental posts
  *     tags: [Posts]
  *     parameters:
  *       - in: query
@@ -38,11 +37,16 @@ const router = express.Router();
  *           type: string
  *           enum: [0-200, 200-500, 500-1000, 1000-2000, 2000+]
  *         description: "Filter by price range (VND in thousands)"
+ *       - in: query
+ *         name: userId
+ *         schema:
+ *           type: string
+ *         description: "Filter by user ID (show only posts created by that user)"
  *     responses:
  *       200:
- *         description: List of approved posts (filtered and/or sorted)
+ *         description: List of posts (filtered and/or sorted)
  */
-router.get('/', postController.getAllApprovedPosts);
+router.get('/', postController.getAllPosts);
 
 /**
  * @swagger
@@ -148,31 +152,6 @@ router.post(
  *         description: Forbidden
  */
 router.put('/:id', requireAuth, postController.updatePost);
-
-/**
- * @swagger
- * /api/posts/{id}/approve:
- *   patch:
- *     summary: Approve a post (admin only)
- *     tags: [Posts]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         description: ID of the post to approve
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Post approved
- *       403:
- *         description: Forbidden
- *       404:
- *         description: Post not found
- */
-router.patch('/:id/approve', requireAuth, requireRole('Admin'), postController.approvePost);
 
 /**
  * @swagger
