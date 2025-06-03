@@ -1,7 +1,6 @@
 import express from 'express';
 import * as postController from '../controllers/post.controller.js';
 import { requireAuth } from '../middleware/requireAuth.js';
-import { requireRole } from '../middleware/requireRole.js';
 import { upload } from '../middleware/upload.js';
 
 const router = express.Router();

@@ -73,19 +73,6 @@ router.post('/login', authController.login);
  *     responses:
  *       200:
  *         description: User data
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 id:
- *                   type: string
- *                 email:
- *                   type: string
- *                 fullName:
- *                   type: string
- *                 role:
- *                   type: string
  *       401:
  *         description: Unauthorized (missing or invalid token)
  */

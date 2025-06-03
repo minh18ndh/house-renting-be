@@ -79,6 +79,5 @@ model FeedbackForm {
 
 model TotalViews {
   id        String   @id @default(uuid())
-  trackDate DateTime
   total     Int
 }

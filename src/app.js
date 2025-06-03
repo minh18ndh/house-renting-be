@@ -7,6 +7,7 @@ import { setupSwagger } from './swagger.js';
 import postRoutes from './routes/post.routes.js';
 import commentRoutes from './routes/comment.routes.js';
 import feedbackRoutes from './routes/feedback.routes.js';
+import totalViewsRoutes from './routes/totalviews.routes.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use('/api/posts', postRoutes);
 app.use('/uploads', express.static('public/uploads'));
 app.use('/api/commentforms', commentRoutes);
 app.use('/api/feedbackforms', feedbackRoutes);
+app.use('/api/totalviews', totalViewsRoutes);
 
 // Swagger UI
 setupSwagger(app);
