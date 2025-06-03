@@ -8,14 +8,6 @@ const router = express.Router();
 
 /**
  * @swagger
- * tags:
- *   name: Posts
- *   description: Rental posts API
- */
-/**
-
-/**
- * @swagger
  * /api/posts:
  *   get:
  *     summary: Get all rental posts
@@ -25,7 +17,6 @@ const router = express.Router();
  *         name: categoryId
  *         schema:
  *           type: string
- *         description: "Filter by category ID"
  *       - in: query
  *         name: location
  *         schema:
@@ -36,12 +27,10 @@ const router = express.Router();
  *         schema:
  *           type: string
  *           enum: [0-200, 200-500, 500-1000, 1000-2000, 2000+]
- *         description: "Filter by price range (VND in thousands)"
  *       - in: query
  *         name: userId
  *         schema:
  *           type: string
- *         description: "Filter by user ID (show only posts created by that user)"
  *     responses:
  *       200:
  *         description: List of posts (filtered and/or sorted)
@@ -58,7 +47,6 @@ router.get('/', postController.getAllPosts);
  *       - in: path
  *         name: id
  *         required: true
- *         description: ID of the post to retrieve
  *         schema:
  *           type: string
  *     responses:
@@ -73,7 +61,7 @@ router.get('/:id', postController.getPostById);
  * @swagger
  * /api/posts:
  *   post:
- *     summary: Create a new post with images
+ *     summary: Create a new post with
  *     tags: [Posts]
  *     security:
  *       - bearerAuth: []
