@@ -1,11 +1,17 @@
 import { prisma } from '../prisma/client.js';
 
-export const getAllApprovedPosts = async () => {
+export const getAllApprovedPosts = () => {
   return prisma.post.findMany({
     where: { isApproved: true },
-    include: { user: true, category: true, images: true }
+    include: {
+      images: {
+        take: 1,
+      },
+      user: true,
+      category: true,
+    }
   });
-};
+}
 
 export const getPostById = async (id) => {
   return prisma.post.findUnique({
