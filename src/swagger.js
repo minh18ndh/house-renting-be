@@ -19,6 +19,7 @@ const options = {
       },
     },
     security: [{ bearerAuth: [] }],
+    servers: [{ url: 'http://localhost:3000' }],
   },
   apis: ['./src/routes/*.js'],
 };
