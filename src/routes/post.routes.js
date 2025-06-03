@@ -14,14 +14,33 @@ const router = express.Router();
  */
 
 /**
+
+/**
  * @swagger
  * /api/posts:
  *   get:
- *     summary: Get all approved posts
+ *     summary: Get all approved rental posts
  *     tags: [Posts]
+ *     parameters:
+ *       - in: query
+ *         name: categoryId
+ *         schema:
+ *           type: string
+ *         description: "Filter by category ID"
+ *       - in: query
+ *         name: location
+ *         schema:
+ *           type: string
+ *         description: "GPS coordinate to sort by distance (format: lat,lng)"
+ *       - in: query
+ *         name: priceRange
+ *         schema:
+ *           type: string
+ *           enum: [0-200, 200-500, 500-1000, 1000-2000, 2000+]
+ *         description: "Filter by price range (VND in thousands)"
  *     responses:
  *       200:
- *         description: List of approved posts
+ *         description: List of approved posts (filtered and/or sorted)
  */
 router.get('/', postController.getAllApprovedPosts);
 

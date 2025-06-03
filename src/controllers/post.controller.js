@@ -1,7 +1,8 @@
 import * as postService from '../services/post.service.js';
 
 export const getAllApprovedPosts = async (req, res) => {
-  const posts = await postService.getAllApprovedPosts();
+  const { categoryId, location, priceRange } = req.query;
+  const posts = await postService.getAllApprovedPosts({ categoryId, location, priceRange });
   res.json(posts);
 };
 
