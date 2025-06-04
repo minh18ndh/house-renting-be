@@ -53,11 +53,16 @@ export const getPostById = async (id) => {
         select: {
           id: true,
           fullName: true,
+          phone: true,
         }
       },
       category: true,
       images: true,
-      comments: true,
+      comments: {
+        include: {
+          user: { select: { fullName: true } },
+        },
+      }
     }
   });
 };

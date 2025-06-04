@@ -3,7 +3,7 @@ import { prisma } from '../prisma/client.js';
 export const getAllComments = async () => {
   return prisma.commentForm.findMany({
     include: {
-      user: { select: { id: true, fullName: true } },
+      user: { select: { id: true, fullName: true, email: true } },
       post: { select: { id: true } }
     }
   });
@@ -31,7 +31,7 @@ export const createComment = async ({ postId, content, rating }, userId) => {
       postId,
       userId,
       content,
-      rating,
+      rating: Number(rating),
     },
   });
 
