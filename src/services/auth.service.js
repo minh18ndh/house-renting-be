@@ -38,6 +38,7 @@ export const getMe = async (userId) => {
     id: user.id,
     email: user.email,
     fullName: user.fullName,
-    role: user.role
+    role: user.role,
+    phone: user.phone
   };
 };

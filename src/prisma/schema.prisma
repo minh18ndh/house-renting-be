@@ -28,6 +28,7 @@ model Post {
   uploadDate  DateTime       @default(now())
   price       Int
   area        Int
+  address     String
   location    String
   bedroom     Int
   content     String

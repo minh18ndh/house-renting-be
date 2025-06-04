@@ -64,7 +64,7 @@ export const getPostById = async (id) => {
 
 export const createPost = async (data, userId, imagePaths) => {
   const {
-    categoryId, price, area, location, bedroom, content
+    categoryId, price, area, address, location, bedroom, content
   } = data;
 
   const created = await prisma.post.create({
@@ -73,6 +73,7 @@ export const createPost = async (data, userId, imagePaths) => {
       userId,
       price: Number(price),
       area: Number(area),
+      address,
       location,
       bedroom: Number(bedroom),
       content,
@@ -106,6 +107,7 @@ export const updatePost = async (postId, data, userId, role) => {
     data: {
       price: Number(data.price),
       area: Number(data.area),
+      address: data.address,
       location: data.location,
       bedroom: Number(data.bedroom),
       content: data.content,

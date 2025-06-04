@@ -81,6 +81,8 @@ router.get('/:id', postController.getPostById);
  *                 type: number
  *               area:
  *                 type: number
+ *               address:
+ *                 type: string
  *               location:
  *                 type: string
  *               bedroom:
@@ -128,6 +130,8 @@ router.post(
  *                 type: integer
  *               area:
  *                 type: integer
+ *               address:
+ *                 type: string
  *               location:
  *                 type: string
  *               bedroom:
