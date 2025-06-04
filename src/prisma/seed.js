@@ -59,9 +59,9 @@ const seed = async () => {
         });
 
         const categories = [
-            'Nhà biệt thự, liền kề',
-            'Nhà chung cư',
-            'Shophouse, nhà mặt phố'
+            'Villa, townhouse',
+            'Apartment',
+            'Shophouse, street-facing house'
         ];
 
         for (const name of categories) {
@@ -73,7 +73,7 @@ const seed = async () => {
         }
 
         const category1 = await prisma.category.findFirst({
-            where: { name: 'Shophouse, nhà mặt phố' }
+            where: { name: 'Shophouse, street-facing house' }
         });
 
         await prisma.post.create({
@@ -97,7 +97,7 @@ const seed = async () => {
         });
 
         const category2 = await prisma.category.findFirst({
-            where: { name: 'Nhà chung cư' }
+            where: { name: 'Apartment' }
         });
 
         await prisma.post.create({
