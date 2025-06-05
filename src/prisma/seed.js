@@ -158,12 +158,12 @@ const seed = async () => {
                 address: '58 Le Duan, Hoan Kiem, Hanoi',
                 location: '21.0307,105.8544',
                 bedroom: 4,
-                content: 'Peaceful and secure area, ideal for families.',
+                content: 'Peaceful and secure area, ideal for one person.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha2.jpg' },
-                        { baseUrl: 'uploads/ha3.jpg' }
+                        { baseUrl: 'uploads/hn3.jpg' },
+                        { baseUrl: 'uploads/hn4.jpg' }
                     ]
                 }
             }
@@ -182,8 +182,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' }
+                        { baseUrl: 'uploads/hn5.jpg' },
+                        { baseUrl: 'uploads/hn6.jpg' }
                     ]
                 }
             }
@@ -202,7 +202,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
+                        { baseUrl: 'uploads/hp1.jpg' },
+                        { baseUrl: 'uploads/hp2.jpg' }
                     ]
                 }
             }
@@ -216,14 +217,14 @@ const seed = async () => {
                 area: 187,
                 address: '78 Le Thanh Tong, Ha Long, Quang Ninh',
                 location: '21.0219,107.2925',
-                bedroom: 3,
+                bedroom: 1,
                 content: 'Classic design meets modern comfort.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' }
+                        { baseUrl: 'uploads/qni1.jpg' },
+                        { baseUrl: 'uploads/qni2.jpg' },
+                        { baseUrl: 'uploads/qni3.jpg' }
                     ]
                 }
             }
@@ -242,9 +243,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
+                        { baseUrl: 'uploads/lc1.jpg' },
+                        { baseUrl: 'uploads/lc2.jpg' }
                     ]
                 }
             }
@@ -263,7 +263,7 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
+                        { baseUrl: 'uploads/ls1.jpg' }
                     ]
                 }
             }
@@ -282,8 +282,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' }
+                        { baseUrl: 'uploads/dn1.jpg' },
+                        { baseUrl: 'uploads/dn2.jpg' }
                     ]
                 }
             }
@@ -302,9 +302,9 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' }
+                        { baseUrl: 'uploads/dn3.jpg' },
+                        { baseUrl: 'uploads/dn4.jpg' },
+                        { baseUrl: 'uploads/dn5.jpg' }
                     ]
                 }
             }
@@ -315,15 +315,16 @@ const seed = async () => {
                 userId: user2.id,
                 categoryId: category3.id,
                 price: 4317,
-                area: 64,
+                area: 264,
                 address: '25 Nguyen Thi Minh Khai, District 1, HCMC',
                 location: '10.762622,106.660172',
-                bedroom: 1,
+                bedroom: 3,
                 content: 'Close to local attractions and transit points.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha2.jpg' }
+                        { baseUrl: 'uploads/hcm1.jpg' },
+                        { baseUrl: 'uploads/hcm2.jpg' }
                     ]
                 }
             }
@@ -342,8 +343,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha3.jpg' },
-                        { baseUrl: 'uploads/ha4.jpg' }
+                        { baseUrl: 'uploads/hcm3.jpg' },
+                        { baseUrl: 'uploads/hcm4.jpg' }
                     ]
                 }
             }
@@ -362,7 +363,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha7.jpg' }
+                        { baseUrl: 'uploads/hcm5.jpg' },
+                        { baseUrl: 'uploads/hcm6.jpg' }
                     ]
                 }
             }
@@ -381,8 +383,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' }
+                        { baseUrl: 'uploads/ct1.jpg' },
+                        { baseUrl: 'uploads/ct2.jpg' }
                     ]
                 }
             }
@@ -401,7 +403,9 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha10.jpg' }
+                        { baseUrl: 'uploads/vt1.jpg' },
+                        { baseUrl: 'uploads/vt2.jpg' },
+                        { baseUrl: 'uploads/vt3.jpg' }
                     ]
                 }
             }
@@ -412,15 +416,15 @@ const seed = async () => {
                 userId: user2.id,
                 categoryId: category1.id,
                 price: 2984,
-                area: 160,
+                area: 400,
                 address: '80 Tran Phu, Bac Lieu City',
                 location: '9.2941,105.7278',
                 bedroom: 2,
-                content: 'Live in luxury with nearby cafes and parks.',
+                content: 'Live in comfort with nearby cafes and parks.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha11.jpg' }
+                        { baseUrl: 'uploads/bl1.jpg' }
                     ]
                 }
             }
@@ -439,7 +443,7 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha12.jpg' }
+                        { baseUrl: 'uploads/ld1.jpg' }
                     ]
                 }
             }
@@ -458,7 +462,7 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha13.jpg' }
+                        { baseUrl: 'uploads/pr1.jpg' }
                     ]
                 }
             }
@@ -469,16 +473,16 @@ const seed = async () => {
                 userId: user4.id,
                 categoryId: category2.id,
                 price: 3217,
-                area: 270,
+                area: 100,
                 address: '2-4-1 Marunouchi, Chiyoda City, Tokyo',
                 location: '35.6762,139.6503',
-                bedroom: 3,
+                bedroom: 1,
                 content: 'Well-equipped and move-in ready.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
+                        { baseUrl: 'uploads/tko1.jpg' },
+                        { baseUrl: 'uploads/tko2.jpg' }
                     ]
                 }
             }
@@ -497,8 +501,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' }
+                        { baseUrl: 'uploads/sn1.jpg' },
+                        { baseUrl: 'uploads/sn2.jpg' }
                     ]
                 }
             }
