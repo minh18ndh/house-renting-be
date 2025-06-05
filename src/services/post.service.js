@@ -40,6 +40,8 @@ export const getAllPosts = async ({ categoryId, location, priceRange, bedroom, u
         distance: distance(queryLat, queryLng, lat, lng),
       };
     }).sort((a, b) => a.distance - b.distance);
+  } else {
+    posts = posts.sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));
   }
 
   return posts;
