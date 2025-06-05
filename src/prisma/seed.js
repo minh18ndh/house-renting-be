@@ -521,8 +521,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha1.jpg' },
-                        { baseUrl: 'uploads/ha2.jpg' }
+                        { baseUrl: 'uploads/trt1.jpg' },
+                        { baseUrl: 'uploads/trt2.jpg' }
                     ]
                 }
             }
@@ -537,7 +537,7 @@ const seed = async () => {
                 address: '45 Le Loi, Hue City, Thua Thien Hue',
                 location: '16.4637,107.5909',
                 bedroom: 3,
-                content: 'Classic home near the Perfume River with a peaceful atmosphere.',
+                content: 'Classic home near the Huong River with a peaceful atmosphere.',
                 isRented: false,
                 images: {
                     create: [
@@ -561,7 +561,8 @@ const seed = async () => {
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/quangngai1.jpg' }
+                        { baseUrl: 'uploads/qng1.jpg' },
+                        { baseUrl: 'uploads/qng2.jpg' }
                     ]
                 }
             }
@@ -575,14 +576,14 @@ const seed = async () => {
                 area: 210,
                 address: '22 Tran Phu, Nha Trang, Khanh Hoa',
                 location: '12.2388,109.1967',
-                bedroom: 4,
+                bedroom: 2,
                 content: 'Modern beachfront apartment with stunning ocean views.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/nhatrang1.jpg' },
-                        { baseUrl: 'uploads/nhatrang2.jpg' },
-                        { baseUrl: 'uploads/nhatrang3.jpg' }
+                        { baseUrl: 'uploads/nt1.jpg' },
+                        { baseUrl: 'uploads/nt2.jpg' },
+                        { baseUrl: 'uploads/nt3.jpg' }
                     ]
                 }
             }
