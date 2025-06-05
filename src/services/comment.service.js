@@ -4,16 +4,7 @@ export const getAllComments = async () => {
   return prisma.commentForm.findMany({
     include: {
       user: { select: { id: true, fullName: true, email: true } },
-      post: { select: { id: true } }
-    }
-  });
-};
-
-export const getCommentsByUser = async (userId) => {
-  return prisma.commentForm.findMany({
-    where: { userId },
-    include: {
-      post: { select: { id: true } }
+      post: { select: { id: true, address: true } }
     }
   });
 };

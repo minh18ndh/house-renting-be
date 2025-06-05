@@ -5,11 +5,6 @@ export const getAllComments = async (req, res) => {
   res.json(comments);
 };
 
-export const getCommentsByUser = async (req, res) => {
-  const comments = await commentService.getCommentsByUser(req.params.id);
-  res.json(comments);
-};
-
 export const createComment = async (req, res) => {
   try {
     const comment = await commentService.createComment(req.body, req.userId);

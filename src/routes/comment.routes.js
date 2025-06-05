@@ -25,30 +25,6 @@ router.get('/', requireAuth, requireRole('Admin'), commentController.getAllComme
 
 /**
  * @swagger
- * /api/commentforms/user/{id}:
- *   get:
- *     summary: Get comments by user ID (admin only)
- *     tags: [CommentForms]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: List of comments by user
- *       401:
- *         description: Unauthorized
- *       403:
- *         description: Forbidden
- */
-router.get('/user/:id', requireAuth, requireRole('Admin'), commentController.getCommentsByUser);
-
-/**
- * @swagger
  * /api/commentforms:
  *   post:
  *     summary: Create a comment for a post

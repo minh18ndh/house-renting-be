@@ -25,30 +25,6 @@ router.get('/', requireAuth, requireRole('Admin'), feedbackController.getAllFeed
 
 /**
  * @swagger
- * /api/feedbackforms/user/{id}:
- *   get:
- *     summary: Get feedback submitted by specific user (admin only)
- *     tags: [FeedbackForms]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: List of feedback submitted by the user
- *       401:
- *         description: Unauthorized
- *       403:
- *         description: Forbidden
- */
-router.get('/user/:id', requireAuth, requireRole('Admin'), feedbackController.getFeedbackByUser);
-
-/**
- * @swagger
  * /api/feedbackforms:
  *   post:
  *     summary: Submit feedback
@@ -74,6 +50,6 @@ router.get('/user/:id', requireAuth, requireRole('Admin'), feedbackController.ge
  *       401:
  *         description: Unauthorized
  */
-router.post('/', requireAuth, feedbackController.createFeedback);
+router.post('/', feedbackController.createFeedback);
 
 export default router;
