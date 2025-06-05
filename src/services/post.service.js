@@ -135,16 +135,16 @@ export const deletePost = async (postId, userId, role) => {
 
 const getPriceFilter = (range) => {
   switch (range) {
-    case '0-200':
-      return { price: { gte: 0, lt: 200 } };
-    case '200-500':
-      return { price: { gte: 200, lt: 500 } };
+    case '0-500':
+      return { price: { gte: 0, lt: 500 } };
     case '500-1000':
       return { price: { gte: 500, lt: 1000 } };
     case '1000-2000':
       return { price: { gte: 1000, lt: 2000 } };
-    case '2000+':
-      return { price: { gte: 2000 } };
+    case '2000-3500':
+      return { price: { gte: 2000, lt: 3500 } };
+    case '3500+':
+      return { price: { gte: 3500 } };
     default:
       return {}; // no filter
   }

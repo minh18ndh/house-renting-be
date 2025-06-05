@@ -25,7 +25,7 @@ const router = express.Router();
  *         name: priceRange
  *         schema:
  *           type: string
- *           enum: [0-200, 200-500, 500-1000, 1000-2000, 2000+]
+ *           enum: [0-500, 500-1000, 1000-2000, 2000-3500, 3500+]
  *       - in: query
  *         name: bedroom
  *         schema:
