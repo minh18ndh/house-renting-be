@@ -151,271 +151,14 @@ const seed = async () => {
 
         await prisma.post.create({
             data: {
-                userId: user3.id,
-                categoryId: category1.id,
-                price: 3103,
-                area: 206,
-                address: '12 Hang Bai, Hoan Kiem, Hanoi',
-                location: '21.0245,105.8521',
+                userId: user2.id,
+                categoryId: category2.id,
+                price: 4080,
+                area: 59,
+                address: '58 Le Duan, Hoan Kiem, Hanoi',
+                location: '21.0307,105.8544',
                 bedroom: 4,
-                content: 'Beautiful shophouse, street-facing house located at 12 Hang Bai, Hoan Kiem, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' },
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user2.id,
-                categoryId: category2.id,
-                price: 4046,
-                area: 268,
-                address: '56 Nguyen Du, Hai Ba Trung, Hanoi',
-                location: '21.0171,105.8486',
-                bedroom: 5,
-                content: 'Beautiful apartment located at 56 Nguyen Du, Hai Ba Trung, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user1.id,
-                categoryId: category1.id,
-                price: 3479,
-                area: 111,
-                address: '3 Le Van Luong, Thanh Xuan, Hanoi',
-                location: '21.0035,105.8038',
-                bedroom: 3,
-                content: 'Beautiful shophouse, street-facing house located at 3 Le Van Luong, Thanh Xuan, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user1.id,
-                categoryId: category3.id,
-                price: 3968,
-                area: 203,
-                address: '89 Tay Son, Dong Da, Hanoi',
-                location: '21.0083,105.8287',
-                bedroom: 2,
-                content: 'Beautiful villa, townhouse located at 89 Tay Son, Dong Da, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' },
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user4.id,
-                categoryId: category1.id,
-                price: 3986,
-                area: 171,
-                address: '77 Xuan Thuy, Cau Giay, Hanoi',
-                location: '21.0384,105.7810',
-                bedroom: 3,
-                content: 'Beautiful shophouse, street-facing house located at 77 Xuan Thuy, Cau Giay, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user4.id,
-                categoryId: category3.id,
-                price: 1787,
-                area: 181,
-                address: '41 Ngo Quyen, Hoan Kiem, Hanoi',
-                location: '21.0256,105.8542',
-                bedroom: 5,
-                content: 'Beautiful villa, townhouse located at 41 Ngo Quyen, Hoan Kiem, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user2.id,
-                categoryId: category1.id,
-                price: 3468,
-                area: 184,
-                address: '120 Kim Ma, Ba Dinh, Hanoi',
-                location: '21.0323,105.8231',
-                bedroom: 4,
-                content: 'Beautiful shophouse, street-facing house located at 120 Kim Ma, Ba Dinh, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user3.id,
-                categoryId: category3.id,
-                price: 2647,
-                area: 161,
-                address: '18 Tran Thai Tong, Cau Giay, Hanoi',
-                location: '21.0365,105.7889',
-                bedroom: 3,
-                content: 'Beautiful villa, townhouse located at 18 Tran Thai Tong, Cau Giay, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user3.id,
-                categoryId: category1.id,
-                price: 2288,
-                area: 92,
-                address: '22 Pham Ngoc Thach, Dong Da, Hanoi',
-                location: '21.0122,105.8301',
-                bedroom: 1,
-                content: 'Beautiful shophouse, street-facing house located at 22 Pham Ngoc Thach, Dong Da, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user2.id,
-                categoryId: category1.id,
-                price: 2603,
-                area: 45,
-                address: '5 Doi Can, Ba Dinh, Hanoi',
-                location: '21.0358,105.8267',
-                bedroom: 2,
-                content: 'Beautiful shophouse, street-facing house located at 5 Doi Can, Ba Dinh, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha2.jpg' },
-                        { baseUrl: 'uploads/ha3.jpg' }
-                    ]
-                }
-            }
-        });
-
-        await prisma.post.create({
-            data: {
-                userId: user2.id,
-                categoryId: category2.id,
-                price: 2469,
-                area: 230,
-                address: '9 Dao Tan, Ba Dinh, Hanoi',
-                location: '21.0348,105.8175',
-                bedroom: 4,
-                content: 'Beautiful apartment located at 9 Dao Tan, Ba Dinh, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' },
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user4.id,
-                categoryId: category2.id,
-                price: 3743,
-                area: 289,
-                address: '35 Thai Ha, Dong Da, Hanoi',
-                location: '21.0185,105.8202',
-                bedroom: 5,
-                content: 'Beautiful apartment located at 35 Thai Ha, Dong Da, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user3.id,
-                categoryId: category2.id,
-                price: 3063,
-                area: 128,
-                address: '11 Pho Hue, Hai Ba Trung, Hanoi',
-                location: '21.0147,105.8533',
-                bedroom: 3,
-                content: 'Beautiful apartment located at 11 Pho Hue, Hai Ba Trung, Hanoi.',
+                content: 'Peaceful and secure area, ideal for families.',
                 isRented: false,
                 images: {
                     create: [
@@ -428,22 +171,19 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user4.id,
-                categoryId: category3.id,
-                price: 2463,
-                area: 254,
-                address: '64 Tran Duy Hung, Cau Giay, Hanoi',
-                location: '21.0098,105.7985',
-                bedroom: 1,
-                content: 'Beautiful villa, townhouse located at 64 Tran Duy Hung, Cau Giay, Hanoi.',
+                userId: user3.id,
+                categoryId: category1.id,
+                price: 2495,
+                area: 224,
+                address: '12 Giai Phong, Dong Da, Hanoi',
+                location: '21.0022,105.8419',
+                bedroom: 3,
+                content: 'Spacious, modern, and ideally located.',
                 isRented: false,
                 images: {
                     create: [
                         { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' },
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
+                        { baseUrl: 'uploads/ha12.jpg' }
                     ]
                 }
             }
@@ -451,35 +191,14 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user3.id,
-                categoryId: category2.id,
-                price: 2692,
-                area: 285,
-                address: '25 Ly Thuong Kiet, Hoan Kiem, Hanoi',
-                location: '21.0223,105.8510',
+                userId: user1.id,
+                categoryId: category1.id,
+                price: 3464,
+                area: 278,
+                address: '35 Tran Phu, Ngo Quyen, Hai Phong',
+                location: '20.8449,106.6881',
                 bedroom: 2,
-                content: 'Beautiful apartment located at 25 Ly Thuong Kiet, Hoan Kiem, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user2.id,
-                categoryId: category3.id,
-                price: 3656,
-                area: 69,
-                address: '7 Nguyen Chi Thanh, Dong Da, Hanoi',
-                location: '21.0249,105.8104',
-                bedroom: 1,
-                content: 'Beautiful villa, townhouse located at 7 Nguyen Chi Thanh, Dong Da, Hanoi.',
+                content: 'Live in luxury with nearby cafes and parks.',
                 isRented: false,
                 images: {
                     create: [
@@ -491,21 +210,20 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user3.id,
-                categoryId: category1.id,
-                price: 3382,
-                area: 285,
-                address: '14 Le Duan, Hoan Kiem, Hanoi',
-                location: '21.0271,105.8399',
+                userId: user4.id,
+                categoryId: category2.id,
+                price: 3104,
+                area: 187,
+                address: '78 Le Thanh Tong, Ha Long, Quang Ninh',
+                location: '21.0219,107.2925',
                 bedroom: 3,
-                content: 'Beautiful shophouse, street-facing house located at 14 Le Duan, Hoan Kiem, Hanoi.',
+                content: 'Classic design meets modern comfort.',
                 isRented: false,
                 images: {
                     create: [
                         { baseUrl: 'uploads/ha7.jpg' },
                         { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
+                        { baseUrl: 'uploads/ha9.jpg' }
                     ]
                 }
             }
@@ -513,56 +231,14 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user3.id,
-                categoryId: category2.id,
-                price: 3757,
-                area: 85,
-                address: '90 Hoang Quoc Viet, Cau Giay, Hanoi',
-                location: '21.0463,105.7887',
-                bedroom: 3,
-                content: 'Beautiful apartment located at 90 Hoang Quoc Viet, Cau Giay, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user4.id,
-                categoryId: category2.id,
-                price: 2552,
-                area: 155,
-                address: '66 Vo Chi Cong, Tay Ho, Hanoi',
-                location: '21.0708,105.8005',
-                bedroom: 2,
-                content: 'Beautiful apartment located at 66 Vo Chi Cong, Tay Ho, Hanoi.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user3.id,
-                categoryId: category2.id,
-                price: 2943,
-                area: 221,
-                address: '32 Kim Dong, Hoang Mai, Hanoi',
-                location: '20.9841,105.8463',
-                bedroom: 2,
-                content: 'Beautiful apartment located at 32 Kim Dong, Hoang Mai, Hanoi.',
+                userId: user2.id,
+                categoryId: category3.id,
+                price: 4364,
+                area: 295,
+                address: '22 Dien Bien Phu, Lao Cai City, Lao Cai',
+                location: '22.4856,103.9706',
+                bedroom: 1,
+                content: 'Enjoy panoramic city views and a vibrant neighborhood.',
                 isRented: false,
                 images: {
                     create: [
@@ -577,18 +253,17 @@ const seed = async () => {
         await prisma.post.create({
             data: {
                 userId: user1.id,
-                categoryId: category3.id,
-                price: 3123,
-                area: 246,
-                address: '5A Phan Dinh Phung, Ba Dinh, Hanoi',
-                location: '21.0360,105.8380',
-                bedroom: 3,
-                content: 'Enjoy scenic views and a relaxing atmosphere every day.',
+                categoryId: category1.id,
+                price: 3450,
+                area: 113,
+                address: '15 Bac Son, Lang Son City, Lang Son',
+                location: '21.8537,106.7615',
+                bedroom: 5,
+                content: 'Affordable and central — best of both worlds.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha2.jpg' },
-                        { baseUrl: 'uploads/ha3.jpg' }
+                        { baseUrl: 'uploads/ha1.jpg' }
                     ]
                 }
             }
@@ -596,20 +271,19 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user4.id,
-                categoryId: category1.id,
-                price: 2442,
-                area: 243,
-                address: '22 Lang Ha, Dong Da, Hanoi',
-                location: '21.0182,105.8163',
-                bedroom: 1,
-                content: 'Affordable luxury in the heart of the capital.',
+                userId: user3.id,
+                categoryId: category3.id,
+                price: 2843,
+                area: 232,
+                address: '150 Le Duan, Hai Chau, Da Nang',
+                location: '16.0544,108.2022',
+                bedroom: 2,
+                content: 'Stylish interior and beautiful surroundings.',
                 isRented: false,
                 images: {
                     create: [
                         { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
+                        { baseUrl: 'uploads/ha5.jpg' }
                     ]
                 }
             }
@@ -617,21 +291,20 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user4.id,
+                userId: user1.id,
                 categoryId: category2.id,
-                price: 3462,
-                area: 208,
-                address: '91 Tran Quoc Hoan, Cau Giay, Hanoi',
-                location: '21.0409,105.7902',
-                bedroom: 5,
-                content: 'A peaceful retreat amidst the bustle of Hanoi.',
+                price: 4253,
+                area: 105,
+                address: '98 Nguyen Van Linh, Thanh Khe, Da Nang',
+                location: '16.0719,108.2230',
+                bedroom: 3,
+                content: 'Well-equipped and move-in ready.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
-                        { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
-                        { baseUrl: 'uploads/ha10.jpg' }
+                        { baseUrl: 'uploads/ha11.jpg' },
+                        { baseUrl: 'uploads/ha12.jpg' },
+                        { baseUrl: 'uploads/ha13.jpg' }
                     ]
                 }
             }
@@ -639,19 +312,18 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user4.id,
-                categoryId: category1.id,
-                price: 3604,
-                area: 243,
-                address: '33 Phung Hung, Hoan Kiem, Hanoi',
-                location: '21.0332,105.8431',
-                bedroom: 3,
-                content: 'Newly renovated with plenty of natural light and modern finishes.',
+                userId: user2.id,
+                categoryId: category3.id,
+                price: 4317,
+                area: 64,
+                address: '25 Nguyen Thi Minh Khai, District 1, HCMC',
+                location: '10.762622,106.660172',
+                bedroom: 1,
+                content: 'Close to local attractions and transit points.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha2.jpg' },
-                        { baseUrl: 'uploads/ha3.jpg' }
+                        { baseUrl: 'uploads/ha2.jpg' }
                     ]
                 }
             }
@@ -661,20 +333,17 @@ const seed = async () => {
             data: {
                 userId: user3.id,
                 categoryId: category1.id,
-                price: 1976,
-                area: 77,
-                address: '18 Nguyen Du, Hai Ba Trung, Hanoi',
-                location: '21.0175,105.8514',
+                price: 3692,
+                area: 270,
+                address: '145 Le Loi, District 1, HCMC',
+                location: '10.7769,106.7009',
                 bedroom: 2,
-                content: 'Modern design with a touch of elegance, fully furnished.',
+                content: 'Stylish interior and beautiful surroundings.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha11.jpg' },
-                        { baseUrl: 'uploads/ha12.jpg' },
-                        { baseUrl: 'uploads/ha13.jpg' },
-                        { baseUrl: 'uploads/ha14.jpg' },
-                        { baseUrl: 'uploads/ha15.jpg' }
+                        { baseUrl: 'uploads/ha3.jpg' },
+                        { baseUrl: 'uploads/ha4.jpg' }
                     ]
                 }
             }
@@ -682,20 +351,56 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user2.id,
+                userId: user4.id,
                 categoryId: category2.id,
-                price: 4125,
-                area: 156,
-                address: '60 Chua Boc, Dong Da, Hanoi',
-                location: '21.0091,105.8240',
-                bedroom: 3,
-                content: 'Stylish interior, spacious layout, and easy access to city landmarks.',
+                price: 2016,
+                area: 288,
+                address: '64 Phan Dang Luu, Phu Nhuan, HCMC',
+                location: '10.8231,106.6297',
+                bedroom: 4,
+                content: 'Newly furnished home near cafes and schools.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha7.jpg' },
+                        { baseUrl: 'uploads/ha7.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user4.id,
+                categoryId: category2.id,
+                price: 3928,
+                area: 190,
+                address: '22 Hoa Binh Blvd, Ninh Kieu, Can Tho',
+                location: '10.0452,105.7469',
+                bedroom: 3,
+                content: 'Peaceful and secure area, ideal for families.',
+                isRented: false,
+                images: {
+                    create: [
                         { baseUrl: 'uploads/ha8.jpg' },
-                        { baseUrl: 'uploads/ha9.jpg' },
+                        { baseUrl: 'uploads/ha9.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user1.id,
+                categoryId: category3.id,
+                price: 1701,
+                area: 267,
+                address: '17 Thuy Van, Vung Tau',
+                location: '10.3460,107.0843',
+                bedroom: 5,
+                content: 'Enjoy panoramic city views and a vibrant neighborhood.',
+                isRented: false,
+                images: {
+                    create: [
                         { baseUrl: 'uploads/ha10.jpg' }
                     ]
                 }
@@ -706,37 +411,134 @@ const seed = async () => {
             data: {
                 userId: user2.id,
                 categoryId: category1.id,
-                price: 2020,
-                area: 116,
-                address: '45 Tran Khanh Du, Hoan Kiem, Hanoi',
-                location: '21.0199,105.8647',
-                bedroom: 5,
+                price: 2984,
+                area: 160,
+                address: '80 Tran Phu, Bac Lieu City',
+                location: '9.2941,105.7278',
+                bedroom: 2,
+                content: 'Live in luxury with nearby cafes and parks.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/ha11.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user3.id,
+                categoryId: category1.id,
+                price: 4139,
+                area: 215,
+                address: '10 Downing St, Westminster, London',
+                location: '51.5074,-0.1278',
+                bedroom: 2,
+                content: 'Classic design meets modern comfort.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/ha12.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user3.id,
+                categoryId: category3.id,
+                price: 3328,
+                area: 121,
+                address: '5 Rue de Rivoli, Paris',
+                location: '48.8566,2.3522',
+                bedroom: 1,
                 content: 'Bright, airy, and ready for you to move in today.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
+                        { baseUrl: 'uploads/ha13.jpg' }
                     ]
                 }
             }
         });
         
+        await prisma.post.create({
+            data: {
+                userId: user4.id,
+                categoryId: category2.id,
+                price: 3217,
+                area: 270,
+                address: '2-4-1 Marunouchi, Chiyoda City, Tokyo',
+                location: '35.6762,139.6503',
+                bedroom: 3,
+                content: 'Well-equipped and move-in ready.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/ha14.jpg' },
+                        { baseUrl: 'uploads/ha15.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user1.id,
+                categoryId: category3.id,
+                price: 2986,
+                area: 204,
+                address: '250 George St, Sydney',
+                location: '-33.8688,151.2093',
+                bedroom: 2,
+                content: 'Stylish interior and beautiful surroundings.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/ha11.jpg' },
+                        { baseUrl: 'uploads/ha13.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user4.id,
+                categoryId: category2.id,
+                price: 4049,
+                area: 137,
+                address: '100 Queen St W, Toronto',
+                location: '43.651070,-79.347015',
+                bedroom: 1,
+                content: 'Spacious, modern, and ideally located.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/ha1.jpg' },
+                        { baseUrl: 'uploads/ha2.jpg' }
+                    ]
+                }
+            }
+        });
+
         await prisma.post.create({
             data: {
                 userId: user2.id,
                 categoryId: category3.id,
-                price: 1753,
-                area: 228,
-                address: '88 Dinh Cong, Hoang Mai, Hanoi',
-                location: '20.9855,105.8373',
-                bedroom: 4,
-                content: 'Ideal for families, close to schools, parks, and shopping centers.',
+                price: 2890,
+                area: 180,
+                address: '45 Le Loi, Hue City, Thua Thien Hue',
+                location: '16.4637,107.5909',
+                bedroom: 3,
+                content: 'Classic home near the Perfume River with a peaceful atmosphere.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
+                        { baseUrl: 'uploads/hue1.jpg' },
+                        { baseUrl: 'uploads/hue2.jpg' }
                     ]
                 }
             }
@@ -744,44 +546,44 @@ const seed = async () => {
         
         await prisma.post.create({
             data: {
-                userId: user1.id,
+                userId: user3.id,
                 categoryId: category1.id,
-                price: 4314,
-                area: 74,
-                address: '12 Lo Duc, Hai Ba Trung, Hanoi',
-                location: '21.0123,105.8590',
-                bedroom: 1,
-                content: 'Surrounded by delicious local eateries and great connectivity.',
-                isRented: false,
-                images: {
-                    create: [
-                        { baseUrl: 'uploads/ha1.jpg' }
-                    ]
-                }
-            }
-        });
-        
-        await prisma.post.create({
-            data: {
-                userId: user1.id,
-                categoryId: category1.id,
-                price: 2033,
-                area: 225,
-                address: '29 Le Van Huu, Hai Ba Trung, Hanoi',
-                location: '21.0142,105.8566',
+                price: 2320,
+                area: 150,
+                address: '12 Quang Trung, Quang Ngai City, Quang Ngai',
+                location: '15.1200,108.7922',
                 bedroom: 2,
-                content: 'Located in a vibrant neighborhood, perfect for young professionals.',
+                content: 'A cozy property in the heart of Quang Ngai, close to local markets.',
                 isRented: false,
                 images: {
                     create: [
-                        { baseUrl: 'uploads/ha4.jpg' },
-                        { baseUrl: 'uploads/ha5.jpg' },
-                        { baseUrl: 'uploads/ha6.jpg' }
+                        { baseUrl: 'uploads/quangngai1.jpg' }
+                    ]
+                }
+            }
+        });
+        
+        await prisma.post.create({
+            data: {
+                userId: user4.id,
+                categoryId: category2.id,
+                price: 3180,
+                area: 210,
+                address: '22 Tran Phu, Nha Trang, Khanh Hoa',
+                location: '12.2388,109.1967',
+                bedroom: 4,
+                content: 'Modern beachfront apartment with stunning ocean views.',
+                isRented: false,
+                images: {
+                    create: [
+                        { baseUrl: 'uploads/nhatrang1.jpg' },
+                        { baseUrl: 'uploads/nhatrang2.jpg' },
+                        { baseUrl: 'uploads/nhatrang3.jpg' }
                     ]
                 }
             }
         });        
-
+               
         console.log('Seed complete!');
     } catch (err) {
         console.error('Seed failed:', err);
